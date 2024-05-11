@@ -1,16 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <title>Tailwind Project</title>
-    <link rel="stylesheet" href="output.css">
-</head>
-<body>
-    
-    <nav>
-        
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="p-3 flex bg-white justify-between gap-14 items-center">
+      <a href="" id="brand" class="flex gap-2 items-center">
+        <img
+          class="object-cover max-w-12 max-h-12"
+          src="./assets/asset 0.png"
+          alt="Logo"
+        />
+        <span class="text-lg font-medium font-display">ToDesktop</span>
+      </a>
+
+      <div id="nav-menu" class="hidden lg:flex gap-12">
+        <a href="#" class="font-medium hover:text-primary-color">Pricing</a>
+        <a href="#" class="font-medium hover:text-primary-color">Docs</a>
+        <a href="#" class="font-medium hover:text-primary-color">Changelog</a>
+        <a href="#" class="font-medium hover:text-primary-color">Blog</a>
+        <a href="#" class="font-medium hover:text-primary-color">Login</a>
+      </div>
+
+      <button
+        class="hidden lg:flex gap-2 py-3 px-4 border border-gray-400 rounded-lg items-center"
+      >
+        <img src="./assets/asset 1.svg" alt="" />
+        <span class="font-medium font-display">Electron Developer</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <button class="p-2" onclick="handleMenu()">
+        <i class="fa-solid fa-bars md:hidden text-gray-600"></i>
+      </button>
+
+      <div
+        id="nav-dialog"
+        class="hidden fixed z-10 md:hidden bg-white inset-0 p-3 items-center"
+      >
+        <div id="nav-bar" class="flex justify-between">
+          <a href="" id="brand" class="flex gap-2 items-center">
+            <img
+              class="object-cover max-w-12 max-h-12"
+              src="./assets/asset 0.png"
+              alt="Logo"
+            />
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+          </a>
+          <button class="p-2" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+        <div class="mt-6">
+          <a
+            href="#"
+            class="font-medium m-3 block hover:bg-gray-100 p-3 rounded-lg hover:text-primary-color"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 block hover:bg-gray-100 p-3 rounded-lg hover:text-primary-color"
+            >Docs</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 block hover:bg-gray-100 p-3 rounded-lg hover:text-primary-color"
+            >Changelog</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 block hover:bg-gray-100 p-3 rounded-lg hover:text-primary-color"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="font-medium m-3 block hover:bg-gray-100 p-3 rounded-lg hover:text-primary-color"
+            >Login</a
+          >
+        </div>
+        <div class="h-[1px] bg-gray-300"></div>
+
+        <button
+          class="mt-6 flex gap-2 py-3 px-4 w-full hover:bg-gray-100 rounded-lg items-center"
+        >
+          <img src="./assets/asset 1.svg" alt="" />
+          <span class="font-medium font-display">Electron Developer</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
     </nav>
 
-</body>
+    <!-- Main  -->
+
+    <main>
+      <!-- Hero section  -->
+      <div
+        id="hero"
+        class="min-h-screen bg-gradient-to-br from-purple-50 via-orange-50 to-transparent"
+      >
+        <div
+          id="hero-container"
+          class="max-w-4xl mx-auto px-6 pb-32 flex flex-col"
+        >
+          <div id="version-conatiner" class="felx my-6 gap-2 w-full">
+            <div class="w-2 h-2 bg-yellow-400 rounded-full border-yellow-600">
+              <p>
+                v0.21.1:
+                <span> Find-in-page bug fixes </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
